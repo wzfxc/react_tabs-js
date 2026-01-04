@@ -1,4 +1,8 @@
-export const Tabs = ({ tabs, onTabSelected, activeTabId, getActiveId }) => (
+export function getActiveId(activeTabId, tabs) {
+  return tabs.find(tab => activeTabId === tab.id) || tabs[0];
+}
+
+export const Tabs = ({ tabs, onTabSelected, activeTabId }) => (
   <div data-cy="TabsComponent">
     <div className="tabs is-boxed">
       <ul>
