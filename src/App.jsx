@@ -28,11 +28,8 @@ export const App = () => {
         tabs={tabs}
         onTabSelected={setActiveTabId}
         activeTabId={activeTabId}
+        getActiveId={getActiveId}
       />
-
-      <div className="block" data-cy="TabContent">
-        {getActiveId(activeTabId).content}
-      </div>
     </div>
   );
 };
